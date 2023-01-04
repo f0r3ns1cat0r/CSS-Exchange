@@ -8,27 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://microsoft.github.io/CSS-Exchange/Diagnostics/HealthChecker/VulnerabilityCheck/">
+        <link rel="canonical" href="https://microsoft.github.io/CSS-Exchange/Admin/CrossTenantMailboxMigrationValidation/">
       
       
-        <link rel="prev" href="../AMSIIntegration/">
+        <link rel="prev" href="../Clear-MailboxPermission/">
       
       
-        <link rel="next" href="../DownloadDomainCheck/">
+        <link rel="next" href="../Find-AmbiguousSids/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
-        <title>VulnerabilityCheck - Microsoft - CSS-Exchange</title>
+        <title>Cross-TenantMailboxMigrationValidation - Microsoft - CSS-Exchange</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.f56500e0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f56500e0.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -44,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vulnerability-check" class="md-skip">
+        <a href="#crosstenantmailboxmigrationvalidation" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Microsoft - CSS-Exchange" class="md-header__button md-logo" aria-label="Microsoft - CSS-Exchange" data-md-component="logo">
+    <a href="../.." title="Microsoft - CSS-Exchange" class="md-header__button md-logo" aria-label="Microsoft - CSS-Exchange" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VulnerabilityCheck
+              Cross-TenantMailboxMigrationValidation
             
           </span>
         </div>
@@ -181,7 +181,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Microsoft - CSS-Exchange" class="md-nav__button md-logo" aria-label="Microsoft - CSS-Exchange" data-md-component="logo">
+    <a href="../.." title="Microsoft - CSS-Exchange" class="md-nav__button md-logo" aria-label="Microsoft - CSS-Exchange" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -212,7 +212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Emerging-Issues/" class="md-nav__link">
+      <a href="../../Emerging-Issues/" class="md-nav__link">
         Emerging Issues
       </a>
     </li>
@@ -225,12 +225,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -273,7 +275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Admin/Clear-MailboxPermission/" class="md-nav__link">
+      <a href="../Clear-MailboxPermission/" class="md-nav__link">
         Clear-MailboxPermission
       </a>
     </li>
@@ -285,11 +287,196 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../Admin/CrossTenantMailboxMigrationValidation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cross-TenantMailboxMigrationValidation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Cross-TenantMailboxMigrationValidation
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    DESCRIPTION
+  </a>
+  
+    <nav class="md-nav" aria-label="DESCRIPTION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    PRE-REQUISITES:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    PARAMETERS
+  </a>
+  
+    <nav class="md-nav" aria-label="PARAMETERS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checkobjects" class="md-nav__link">
+    CheckObjects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    CSV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkorgs" class="md-nav__link">
+    CheckOrgs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sdp" class="md-nav__link">
+    SDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logpath" class="md-nav__link">
+    LogPath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collectsourceonly" class="md-nav__link">
+    CollectSourceOnly
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathforcollecteddata" class="md-nav__link">
+    PathForCollectedData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sourceisoffline" class="md-nav__link">
+    SourceIsOffline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    EXAMPLES
+  </a>
+  
+    <nav class="md-nav" aria-label="EXAMPLES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" class="md-nav__link">
+    EXAMPLE 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2" class="md-nav__link">
+    EXAMPLE 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3" class="md-nav__link">
+    EXAMPLE 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4" class="md-nav__link">
+    EXAMPLE 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5" class="md-nav__link">
+    EXAMPLE 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-6" class="md-nav__link">
+    EXAMPLE 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-7" class="md-nav__link">
+    EXAMPLE 7
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -301,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Admin/Find-AmbiguousSids/" class="md-nav__link">
+      <a href="../Find-AmbiguousSids/" class="md-nav__link">
         Find-AmbiguousSids
       </a>
     </li>
@@ -315,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Admin/Get-EASMailboxLogs/" class="md-nav__link">
+      <a href="../Get-EASMailboxLogs/" class="md-nav__link">
         Get-EASMailboxLogs
       </a>
     </li>
@@ -329,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Admin/Get-SimpleAuditLogReport/" class="md-nav__link">
+      <a href="../Get-SimpleAuditLogReport/" class="md-nav__link">
         Get-SimpleAuditLogReport
       </a>
     </li>
@@ -343,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Admin/Remove-CertExpiryNotifications/" class="md-nav__link">
+      <a href="../Remove-CertExpiryNotifications/" class="md-nav__link">
         Remove-CertExpiryNotifications
       </a>
     </li>
@@ -357,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Admin/Reset-ScanEngineVersion/" class="md-nav__link">
+      <a href="../Reset-ScanEngineVersion/" class="md-nav__link">
         Reset-ScanEngineVersion
       </a>
     </li>
@@ -371,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Admin/SetUnifiedContentPath/" class="md-nav__link">
+      <a href="../SetUnifiedContentPath/" class="md-nav__link">
         SetUnifiedContentPath
       </a>
     </li>
@@ -385,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Admin/Test-AMSI/" class="md-nav__link">
+      <a href="../Test-AMSI/" class="md-nav__link">
         Test-AMSI
       </a>
     </li>
@@ -441,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Databases/Analyze-SpaceDump/" class="md-nav__link">
+      <a href="../../Databases/Analyze-SpaceDump/" class="md-nav__link">
         Analyze-SpaceDump
       </a>
     </li>
@@ -455,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Databases/Compare-MailboxStatistics/" class="md-nav__link">
+      <a href="../../Databases/Compare-MailboxStatistics/" class="md-nav__link">
         Compare-MailboxStatistics
       </a>
     </li>
@@ -469,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Databases/VSSTester/" class="md-nav__link">
+      <a href="../../Databases/VSSTester/" class="md-nav__link">
         VSSTester
       </a>
     </li>
@@ -489,14 +676,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -531,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ExchangeLogCollector/" class="md-nav__link">
+      <a href="../../Diagnostics/ExchangeLogCollector/" class="md-nav__link">
         ExchangeLogCollector
       </a>
     </li>
@@ -545,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ExTRA/" class="md-nav__link">
+      <a href="../../Diagnostics/ExTRA/" class="md-nav__link">
         ExTRA
       </a>
     </li>
@@ -557,14 +742,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
       
       
       
@@ -642,7 +825,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">HealthChecker</a>
+          <a href="../../Diagnostics/HealthChecker/">HealthChecker</a>
           
             <label for="__nav_4_3">
               <span class="md-nav__icon md-icon"></span>
@@ -665,7 +848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ExchangeServerMaintenanceCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/ExchangeServerMaintenanceCheck/" class="md-nav__link">
         MaintenanceCheck
       </a>
     </li>
@@ -679,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MAPIFrontEndAppPoolGCModeCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/MAPIFrontEndAppPoolGCModeCheck/" class="md-nav__link">
         GCModeCheck
       </a>
     </li>
@@ -693,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RebootPending/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/RebootPending/" class="md-nav__link">
         RebootPending
       </a>
     </li>
@@ -707,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CTSProcessorAffinityPercentageCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/CTSProcessorAffinityPercentageCheck/" class="md-nav__link">
         CTSProcessorAffinityCheck
       </a>
     </li>
@@ -721,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CredentialGuardCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/CredentialGuardCheck/" class="md-nav__link">
         CredentialGuardCheck
       </a>
     </li>
@@ -735,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RPCMinConnectionTimeoutCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/RPCMinConnectionTimeoutCheck/" class="md-nav__link">
         RPCMinConnectionTimeoutCheck
       </a>
     </li>
@@ -749,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TCPIPSettingsCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/TCPIPSettingsCheck/" class="md-nav__link">
         TCPIPSettingsCheck
       </a>
     </li>
@@ -763,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GeneralHardwareInformation/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/GeneralHardwareInformation/" class="md-nav__link">
         GeneralHardwareInformation
       </a>
     </li>
@@ -777,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../HyperThreadingCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/HyperThreadingCheck/" class="md-nav__link">
         HyperThreadingCheck
       </a>
     </li>
@@ -791,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NumaBiosCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/NumaBiosCheck/" class="md-nav__link">
         NumaBiosCheck
       </a>
     </li>
@@ -805,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProcessorCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/ProcessorCheck/" class="md-nav__link">
         ProcessorCheck
       </a>
     </li>
@@ -819,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../IPv6EnabledCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/IPv6EnabledCheck/" class="md-nav__link">
         IPv6EnabledCheck
       </a>
     </li>
@@ -833,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PacketsLossCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/PacketsLossCheck/" class="md-nav__link">
         PacketsLossCheck
       </a>
     </li>
@@ -847,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RSSEnabledCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/RSSEnabledCheck/" class="md-nav__link">
         RSSEnabledCheck
       </a>
     </li>
@@ -861,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SleepyNICCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/SleepyNICCheck/" class="md-nav__link">
         SleepyNICCheck
       </a>
     </li>
@@ -875,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NETFrameworkSupportabilityCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/NETFrameworkSupportabilityCheck/" class="md-nav__link">
         NETFrameworkCheck
       </a>
     </li>
@@ -889,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PagefileSizeCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/PagefileSizeCheck/" class="md-nav__link">
         PagefileCheck
       </a>
     </li>
@@ -903,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../VisualCRedistributableVersionCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/VisualCRedistributableVersionCheck/" class="md-nav__link">
         VisualCCheck
       </a>
     </li>
@@ -917,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LMCompatibilityLevelInformationCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/LMCompatibilityLevelInformationCheck/" class="md-nav__link">
         LMCompatibilityLevelInformationCheck
       </a>
     </li>
@@ -931,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CloudConnectorCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/CloudConnectorCheck/" class="md-nav__link">
         CloudConnectorCheck
       </a>
     </li>
@@ -945,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TLSConfigurationCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/TLSConfigurationCheck/" class="md-nav__link">
         TLSConfigurationCheck
       </a>
     </li>
@@ -959,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CertificateCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/CertificateCheck/" class="md-nav__link">
         CertificateCheck
       </a>
     </li>
@@ -973,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SMBv1Check/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/SMBv1Check/" class="md-nav__link">
         SMBv1Check
       </a>
     </li>
@@ -987,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../EEMSCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/EEMSCheck/" class="md-nav__link">
         EEMSCheck
       </a>
     </li>
@@ -1001,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AMSIIntegration/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/AMSIIntegration/" class="md-nav__link">
         AMSICheck
       </a>
     </li>
@@ -1013,21 +1196,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Diagnostics/HealthChecker/VulnerabilityCheck/" class="md-nav__link">
         VulnerabilityCheck
       </a>
-      
     </li>
   
 
@@ -1039,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DownloadDomainCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/DownloadDomainCheck/" class="md-nav__link">
         DownloadDomainCheck
       </a>
     </li>
@@ -1053,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OpenRelayDomain/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/OpenRelayDomain/" class="md-nav__link">
         OpenRelayDomainCheck
       </a>
     </li>
@@ -1067,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FIPFSCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/FIPFSCheck/" class="md-nav__link">
         FIPFSCheck
       </a>
     </li>
@@ -1081,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../IISWebConfigCheck/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/IISWebConfigCheck/" class="md-nav__link">
         IISWebConfigCheck
       </a>
     </li>
@@ -1095,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RunHCViaSchedTask/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/RunHCViaSchedTask/" class="md-nav__link">
         HCScheduledTask
       </a>
     </li>
@@ -1109,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ADSiteCount/" class="md-nav__link">
+      <a href="../../Diagnostics/HealthChecker/ADSiteCount/" class="md-nav__link">
         ADSiteCount
       </a>
     </li>
@@ -1130,7 +1303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ManagedAvailabilityTroubleshooter/" class="md-nav__link">
+      <a href="../../Diagnostics/ManagedAvailabilityTroubleshooter/" class="md-nav__link">
         ManagedAvailabilityTroubleshooter
       </a>
     </li>
@@ -1144,7 +1317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Test-ExchAVExclusions/" class="md-nav__link">
+      <a href="../../Diagnostics/Test-ExchAVExclusions/" class="md-nav__link">
         Test-ExchAVExclusions
       </a>
     </li>
@@ -1196,7 +1369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Hybrid/Test-HMAEAS/" class="md-nav__link">
+      <a href="../../Hybrid/Test-HMAEAS/" class="md-nav__link">
         Test-HMAEAS
       </a>
     </li>
@@ -1248,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../M365/DLT365Groupsupgrade/" class="md-nav__link">
+      <a href="../../M365/DLT365Groupsupgrade/" class="md-nav__link">
         DLT365Groupsupgrade
       </a>
     </li>
@@ -1304,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Performance/ExPerfWiz/" class="md-nav__link">
+      <a href="../../Performance/ExPerfWiz/" class="md-nav__link">
         ExPerfWiz
       </a>
     </li>
@@ -1318,7 +1491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Performance/ExPerfAnalyzer/" class="md-nav__link">
+      <a href="../../Performance/ExPerfAnalyzer/" class="md-nav__link">
         ExPerfAnalyzer
       </a>
     </li>
@@ -1332,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Performance/SimplePerf/" class="md-nav__link">
+      <a href="../../Performance/SimplePerf/" class="md-nav__link">
         SimplePerf
       </a>
     </li>
@@ -1386,7 +1559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../PublicFolders/SourceSideValidations/" class="md-nav__link">
+      <a href="../../PublicFolders/SourceSideValidations/" class="md-nav__link">
         SourceSideValidations
       </a>
     </li>
@@ -1400,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../PublicFolders/ValidateMailEnabledPublicFolders/" class="md-nav__link">
+      <a href="../../PublicFolders/ValidateMailEnabledPublicFolders/" class="md-nav__link">
         ValidateMailEnabledPublicFolders
       </a>
     </li>
@@ -1452,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Retention/Get-MRMDetails/" class="md-nav__link">
+      <a href="../../Retention/Get-MRMDetails/" class="md-nav__link">
         Get-MRMDetails
       </a>
     </li>
@@ -1504,7 +1677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Search/Troubleshoot-ModernSearch/" class="md-nav__link">
+      <a href="../../Search/Troubleshoot-ModernSearch/" class="md-nav__link">
         Troubleshoot-ModernSearch
       </a>
     </li>
@@ -1568,7 +1741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Security/EOMT/" class="md-nav__link">
+      <a href="../../Security/EOMT/" class="md-nav__link">
         EOMT
       </a>
     </li>
@@ -1582,7 +1755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Security/EOMTv2/" class="md-nav__link">
+      <a href="../../Security/EOMTv2/" class="md-nav__link">
         EOMTv2
       </a>
     </li>
@@ -1596,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Security/Extended-Protection/" class="md-nav__link">
+      <a href="../../Security/Extended-Protection/" class="md-nav__link">
         Extended Protection
       </a>
     </li>
@@ -1610,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Security/ExchangeExtendedProtectionManagement/" class="md-nav__link">
+      <a href="../../Security/ExchangeExtendedProtectionManagement/" class="md-nav__link">
         ExchangeExtendedProtectionManagement
       </a>
     </li>
@@ -1624,7 +1797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Security/ExchangeMitigations/" class="md-nav__link">
+      <a href="../../Security/ExchangeMitigations/" class="md-nav__link">
         ExchangeMitigations
       </a>
     </li>
@@ -1638,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Security/Test-CVE-2021-34470/" class="md-nav__link">
+      <a href="../../Security/Test-CVE-2021-34470/" class="md-nav__link">
         Test-CVE-2021-34470
       </a>
     </li>
@@ -1652,7 +1825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Security/Test-ProxyLogon/" class="md-nav__link">
+      <a href="../../Security/Test-ProxyLogon/" class="md-nav__link">
         Test-ProxyLogon
       </a>
     </li>
@@ -1712,7 +1885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Setup/CopyMissingDlls/" class="md-nav__link">
+      <a href="../../Setup/CopyMissingDlls/" class="md-nav__link">
         CopyMissingDlls
       </a>
     </li>
@@ -1726,7 +1899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Setup/FixInstallerCache/" class="md-nav__link">
+      <a href="../../Setup/FixInstallerCache/" class="md-nav__link">
         FixInstallerCache
       </a>
     </li>
@@ -1740,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Setup/Set-ExchAVExclusions/" class="md-nav__link">
+      <a href="../../Setup/Set-ExchAVExclusions/" class="md-nav__link">
         Set-ExchAVExclusions
       </a>
     </li>
@@ -1777,7 +1950,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../Setup/SetupAssist/">SetupAssist</a>
+          <a href="../../Setup/SetupAssist/">SetupAssist</a>
           
             <label for="__nav_12_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1800,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Setup/SetupAssist/ComputersContainer/" class="md-nav__link">
+      <a href="../../Setup/SetupAssist/ComputersContainer/" class="md-nav__link">
         ComputersContainer
       </a>
     </li>
@@ -1814,7 +1987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Setup/SetupAssist/ReadOnlyDomainControllerContainer/" class="md-nav__link">
+      <a href="../../Setup/SetupAssist/ReadOnlyDomainControllerContainer/" class="md-nav__link">
         ReadOnlyDomainControllerContainer
       </a>
     </li>
@@ -1828,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Setup/SetupAssist/RebootPending/" class="md-nav__link">
+      <a href="../../Setup/SetupAssist/RebootPending/" class="md-nav__link">
         RebootPending
       </a>
     </li>
@@ -1849,7 +2022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Setup/SetupLogReviewer/" class="md-nav__link">
+      <a href="../../Setup/SetupLogReviewer/" class="md-nav__link">
         SetupLogReviewer
       </a>
     </li>
@@ -1903,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Transport/Compute-TopExoRecipientsFromMessageTrace/" class="md-nav__link">
+      <a href="../../Transport/Compute-TopExoRecipientsFromMessageTrace/" class="md-nav__link">
         Compute-TopExoRecipientsFromMessageTrace
       </a>
     </li>
@@ -1917,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Transport/ReplayQueueDatabases/" class="md-nav__link">
+      <a href="../../Transport/ReplayQueueDatabases/" class="md-nav__link">
         ReplayQueueDatabases
       </a>
     </li>
@@ -1951,6 +2124,165 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    DESCRIPTION
+  </a>
+  
+    <nav class="md-nav" aria-label="DESCRIPTION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    PRE-REQUISITES:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    PARAMETERS
+  </a>
+  
+    <nav class="md-nav" aria-label="PARAMETERS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checkobjects" class="md-nav__link">
+    CheckObjects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    CSV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkorgs" class="md-nav__link">
+    CheckOrgs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sdp" class="md-nav__link">
+    SDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logpath" class="md-nav__link">
+    LogPath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collectsourceonly" class="md-nav__link">
+    CollectSourceOnly
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathforcollecteddata" class="md-nav__link">
+    PathForCollectedData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sourceisoffline" class="md-nav__link">
+    SourceIsOffline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    EXAMPLES
+  </a>
+  
+    <nav class="md-nav" aria-label="EXAMPLES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" class="md-nav__link">
+    EXAMPLE 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2" class="md-nav__link">
+    EXAMPLE 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3" class="md-nav__link">
+    EXAMPLE 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4" class="md-nav__link">
+    EXAMPLE 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5" class="md-nav__link">
+    EXAMPLE 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-6" class="md-nav__link">
+    EXAMPLE 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-7" class="md-nav__link">
+    EXAMPLE 7
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1968,24 +2300,96 @@
 
 
 
-<h1 id="vulnerability-check">Vulnerability Check</h1>
-<p>The script performs different checks to detect vulnerabilities which may lead into a security issue for the Exchange server.</p>
-<p><strong>Vulnerability checks performed:</strong></p>
+<h1 id="crosstenantmailboxmigrationvalidation">CrossTenantMailboxMigrationValidation</h1>
+<p>Download the latest release: <a href="https://github.com/microsoft/CSS-Exchange/releases/latest/download/CrossTenantMailboxMigrationValidation.ps1">CrossTenantMailboxMigrationValidation.ps1</a></p>
+<h2 id="description">DESCRIPTION</h2>
+<p>This script offers the ability to validate users and org settings related to the Cross-tenant mailbox migration before creating a migration batch and have a better experience.</p>
+<p>It will help you on:</p>
 <ul>
-<li>Check the Exchange server build number against known vulnerabilities that exists within a specific build</li>
-<li>Check for <code>CVE-2020-0796</code> SMBv3 vulnerability</li>
-<li>Check for <code>CVE-2020-1147</code> .NET Core &amp; .NET Framework vulnerability</li>
-<li>Check for <code>CVE-2021-1730</code> <a href="../DownloadDomainCheck/">Download Domains</a> state</li>
+<li>Making sure the source mailbox object is a member of the Mail-Enabled Security Group defined on the MailboxMovePublishedScopes of the source organization relationship</li>
+<li>Making sure the source mailbox object ExchangeGuid attribute value matches the one from the target MailUser object, and give you the option to set it</li>
+<li>Making sure the source mailbox object ArchiveGuid attribute (if there's an Archive enabled) value matches the one from the target MailUser object, and give you the option to set it</li>
+<li>Making sure the source mailbox object has no more than 12 auxArchives</li>
+<li>Making sure the source mailbox object has no hold applied</li>
+<li>Making sure the source mailbox object TotalDeletedItemsSize is not bigger than Target MailUser recoverable items size</li>
+<li>Making sure the source mailbox object LegacyExchangeDN attribute value is present on the target MailUser object as an X500 proxyAddress, and give you the option to set it, as long as the Target MailUser is not DirSynced</li>
+<li>Making sure the target MailUser object PrimarySMTPAddress attribute value is part of the target tenant accepted domains and give you the option to set it to be like the UPN if not true, as long as the Target MailUser is not DirSynced</li>
+<li>Making sure the target MailUser object EmailAddresses are all part of the target tenant accepted domains and give you the option to remove them if any doesn't belong to are found, as long as the Target MailUser is not DirSynced</li>
+<li>Making sure the target MailUser object ExternalEmailAddress attribute value points to the source Mailbox object PrimarySMTPAddress and give you the option to set it if not true, as long as the Target MailUser is not DirSynced</li>
+<li>Checking if there's an AAD app as described on https://docs.microsoft.com/en-us/microsoft-365/enterprise/cross-tenant-mailbox-migration?view=o365-worldwide#prepare-the-target-destination-tenant-by-creating-the-migration-application-and-secret</li>
+<li>Checking if the target tenant has an Organization Relationship as described on https://docs.microsoft.com/en-us/microsoft-365/enterprise/cross-tenant-mailbox-migration?view=o365-worldwide#prepare-the-target-tenant-by-creating-the-exchange-online-migration-endpoint-and-organization-relationship</li>
+<li>Checking if the target tenant has a Migration Endpoint as described on https://docs.microsoft.com/en-us/microsoft-365/enterprise/cross-tenant-mailbox-migration?view=o365-worldwide#prepare-the-target-tenant-by-creating-the-exchange-online-migration-endpoint-and-organization-relationship</li>
+<li>Checking if the source tenant has an Organization Relationship as described on https://docs.microsoft.com/en-us/microsoft-365/enterprise/cross-tenant-mailbox-migration?view=o365-worldwide#prepare-the-source-current-mailbox-location-tenant-by-accepting-the-migration-application-and-configuring-the-organization-relationship including a Mail-Enabled security group defined on the MailboxMovePublishedScopes property.</li>
+<li>Gather all the necessary information for troubleshooting and send it to Microsoft Support if needed</li>
+<li>Because not all scenarios allow access to both tenants by the same person, this will also allow you to collect the source tenant and mailbox information and wrap it into a zip file so the target tenant admin can use it as a source to validate against.</li>
 </ul>
-<p><strong>Included in HTML Report?</strong></p>
-<p>Yes</p>
+<p>The script will prompt you to connect to your source and target tenants for EXO and AAD as needed
+You can decide to run the checks for the source mailbox and target mailuser (individually or by providing a CSV file), for the organization settings described above, collect the source information and compress it to a zip file that can be used by the target tenant admins, or use the collected zip file as a source to validate the target objects and configurations against it.</p>
+<h3 id="pre-requisites">PRE-REQUISITES:</h3>
+<ul>
+<li>Please make sure you have at least the Exchange Online V2 Powershell module (https://docs.microsoft.com/en-us/powershell/exchange/exchange-online-powershell-v2?view=exchange-ps#install-and-maintain-the-exo-v2-module)</li>
+<li>You would need the Azure AD Module (https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)</li>
+<li>Also, depending on the parameters you specify, you will be prompted for the SourceTenantId and TargetTenantId (i.e.: if you choose to run the script with the "CheckOrgs" parameter). To obtain the tenant ID of a subscription, sign in to the Microsoft 365 admin center and go to https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties. Click the copy icon for the Tenant ID property to copy it to the clipboard.</li>
+</ul>
+<h2 id="parameters">PARAMETERS</h2>
+<h3 id="checkobjects">CheckObjects</h3>
+<p>This will allow you to perform the checks for the Source Mailbox and Target MailUser objects you provide. If used without the "-CSV" parameter, you will be prompted to type the identities.. If used with the '-SourceIsOffline' you also need to specify the '-PathForCollectedData' parameter</p>
+<h3 id="csv">CSV</h3>
+<p>This will allow you to specify a path for a CSV file you have with a list of users that contain the "SourceUser, TargetUser" columns.
+An example of the CSV file content would be:</p>
+<div class="highlight"><pre><span></span><code>SourceUser, TargetUser
+Jdoe@contoso.com, Jdoe@fabrikam.com
+BSmith@contoso.com, BSmith@fabrikam.com
+</code></pre></div>
+<p>If Used along with the 'CollectSourceOnly' parameter, you only need the 'SourceUser' column.</p>
+<h3 id="checkorgs">CheckOrgs</h3>
+<p>This will allow you to perform the checks for the source and target organizations. More specifically the organization relationship on both tenants, the migration endpoint on target tenant and the existence of the AAD application needed.</p>
+<h3 id="sdp">SDP</h3>
+<p>This will collect all the relevant information for troubleshooting from both tenants and be able to send it to Microsoft Support in case of needed.</p>
+<h3 id="logpath">LogPath</h3>
+<p>This will allow you to specify a log path to transcript all the script execution and it's results. This parameter is mandatory.</p>
+<h3 id="collectsourceonly">CollectSourceOnly</h3>
+<p>This will allow you to specify a CSV file so we can export all necessary data of the source tenant and mailboxes to migrate, compress the files as a zip file to be used by the target tenant admin as a source for validation against the target. This parameter is mandatory and also requires the '-CSV' parameter to be specified containing the SourceUser column.</p>
+<h3 id="pathforcollecteddata">PathForCollectedData</h3>
+<p>This will allow you to specify a path to store the exported data from the source tenant when used along with the 'CollectSourceOnly' and 'SDP' parameters transcript all the script execution and it's results. This parameter is mandatory.</p>
+<h3 id="sourceisoffline">SourceIsOffline</h3>
+<p>With this parameter, the script will only connect to target tenant and not source, instead it will rely on the zip file gathered when running this script along with the 'CollectSourceOnly' parameter. When used, you also need to specify the 'PathForCollectedData' parameter pointing to the collected zip file.</p>
+<h2 id="examples">EXAMPLES</h2>
+<h3 id="example-1">EXAMPLE 1</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.\</span><span class="n">CrossTenantMailboxMigrationValidation</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-CheckObjects</span> <span class="n">-LogPath</span> <span class="n">C</span><span class="p">:\</span><span class="n">Temp</span><span class="p">\</span><span class="n">LogFile</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div>
+<p>This will prompt you to type the source mailbox identity and the target identity, will establish 2 EXO remote powershell sessions (one to the source tenant and another one to the target tenant), and will check the objects.</p>
+<h3 id="example-2">EXAMPLE 2</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.\</span><span class="n">CrossTenantMailboxMigrationValidation</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-CheckObjects</span> <span class="n">-CSV</span> <span class="n">C</span><span class="p">:\</span><span class="n">Temp</span><span class="p">\</span><span class="n">UsersToMigrateValidationList</span><span class="p">.</span><span class="n">CSV</span> <span class="n">-LogPath</span> <span class="n">C</span><span class="p">:\</span><span class="n">Temp</span><span class="p">\</span><span class="n">LogFile</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div>
+<p>This will establish 2 EXO remote powershell sessions (one to the source tenant and another one to the target tenant), will import the CSV file contents and will check the objects one by one.</p>
+<h3 id="example-3">EXAMPLE 3</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.\</span><span class="n">CrossTenantMailboxMigrationValidation</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-CheckOrgs</span> <span class="n">-LogPath</span> <span class="n">C</span><span class="p">:\</span><span class="n">Temp</span><span class="p">\</span><span class="n">LogFile</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div>
+<p>This will prompt you for the soureTenantId and TargetTenantId, establish 3 remote powershell sessions (one to the source EXO tenant, one to the target EXO tenant and another one to AAD target tenant), and will validate the migration endpoint on the target tenant, AAD applicationId on target tenant and the Orgnization relationship on both tenants.</p>
+<h3 id="example-4">EXAMPLE 4</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.\</span><span class="n">CrossTenantMailboxMigrationValidation</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-SDP</span> <span class="n">-LogPath</span> <span class="n">C</span><span class="p">:\</span><span class="n">Temp</span><span class="p">\</span><span class="n">LogFile</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div>
+<p>This will prompt you for the soureTenantId and TargetTenantId, establish 3 remote powershell sessions (one to the source EXO tenant, one to the target EXO tenant and another one to AAD target tenant), and will collect all the relevant information (config-wise) so it can be used for troubleshooting and send it to Microsoft Support if needed.</p>
+<h3 id="example-5">EXAMPLE 5</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.\</span><span class="n">CrossTenantMailboxMigrationValidation</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-SourceIsOffline</span> <span class="n">-PathForCollectedData</span> <span class="n">C</span><span class="p">:\</span><span class="n">temp</span><span class="p">\</span><span class="n">CTMMCollectedSourceData</span><span class="p">.</span><span class="n">zip</span> <span class="n">-CheckObjects</span> <span class="n">-LogPath</span> <span class="n">C</span><span class="p">:\</span><span class="n">temp</span><span class="p">\</span><span class="n">CTMMTarget</span><span class="p">.</span><span class="n">log</span>
+</code></pre></div>
+<p>This will expand the CTMMCollectedSourceData.zip file contents into a folder with the same name within the zip location, will establish the EXO remote powershell session and also with AAD against the Target tenant and will check the objects contained on the UsersToProcess.CSV file.</p>
+<h3 id="example-6">EXAMPLE 6</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.\</span><span class="n">CrossTenantMailboxMigrationValidation</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-SourceIsOffline</span> <span class="n">-PathForCollectedData</span> <span class="n">C</span><span class="p">:\</span><span class="n">temp</span><span class="p">\</span><span class="n">CTMMCollectedSourceData</span><span class="p">.</span><span class="n">zip</span> <span class="n">-CheckOrgs</span> <span class="n">-LogPath</span> <span class="n">C</span><span class="p">:\</span><span class="n">temp</span><span class="p">\</span><span class="n">CTMMTarget</span><span class="p">.</span><span class="n">log</span>
+</code></pre></div>
+<p>This will expand the CTMMCollectedSourceData.zip file contents into a folder with the same name within the zip location, will establish the EXO remote powershell session and also with AAD against the Target tenant, and will validate the migration endpoint on the target tenant, AAD applicationId on target tenant and the Orgnization relationship on both tenants.</p>
+<h3 id="example-7">EXAMPLE 7</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.\</span><span class="n">CrossTenantMailboxMigrationValidation</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-CollectSourceOnly</span> <span class="n">-PathForCollectedData</span> <span class="n">c</span><span class="p">:\</span><span class="n">temp</span> <span class="n">-LogPath</span> <span class="n">C</span><span class="p">:\</span><span class="n">temp</span><span class="p">\</span><span class="n">CTMMCollectSource</span><span class="p">.</span><span class="n">log</span> <span class="n">-CSV</span> <span class="n">C</span><span class="p">:\</span><span class="n">temp</span><span class="p">\</span><span class="n">UsersToMigrate</span><span class="p">.</span><span class="n">csv</span>
+</code></pre></div>
+<p>This will connect to the Source tenant against AAD and EXO, and will collect all the relevant information (config and user wise) so it can be used passed to the Target tenant admin for the Target validation to be done without the need to connect to the source tenant at the same time.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 19, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
       
     
   </small>
@@ -2027,10 +2431,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
     
   </body>
