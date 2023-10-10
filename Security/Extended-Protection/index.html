@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.79e020e9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
       
       
   
@@ -3781,7 +3781,7 @@ The same applies to the <em>SystemDefaultTlsVersions</em> registry value which m
 <tr>
 <td>Default Website</td>
 <td>OAB</td>
-<td>Required</td>
+<td>Accept (UI) /Allow (Script)</td>
 <td>Ssl,Ssl128</td>
 </tr>
 <tr>
@@ -3882,6 +3882,10 @@ The same applies to the <em>SystemDefaultTlsVersions</em> registry value which m
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Note</p>
+<p>After initial release, we have updated <code>Default Website/OAB</code> to be <code>Accept/Allow</code> instead of <code>Required</code>. This is because of Outlook for Mac clients not being able to download the OAB any longer with the <code>Required</code> setting.</p>
+</div>
 <p>SSL offloading for Outlook Anywhere is enabled by default and must be disabled for extended protection by following the steps shown <a href="https://docs.microsoft.com/powershell/module/exchange/set-outlookanywhere?view=exchange-ps#example-3">here</a>.</p>
 <h3 id="enabling-extended-protection-using-the-script">Enabling Extended Protection using the script</h3>
 <p>Before enabling Extended Protection in your Exchange environment, ensure you meet all the prerequisites listed in this document.</p>
@@ -4103,7 +4107,7 @@ If you plan to stay on the CU without installing the SU immediately, you must di
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 28, 2023</span>
       
     
   </small>
@@ -4146,10 +4150,10 @@ If you plan to stay on the CU without installing the SU immediately, you must di
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "content.action.edit"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
       
     
   </body>
