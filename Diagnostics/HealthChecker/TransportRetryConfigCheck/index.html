@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://microsoft.github.io/CSS-Exchange/Diagnostics/HealthChecker/CredentialGuardCheck/">
+        <link rel="canonical" href="https://microsoft.github.io/CSS-Exchange/Diagnostics/HealthChecker/TransportRetryConfigCheck/">
       
       
-        <link rel="prev" href="../CTSProcessorAffinityPercentageCheck/">
+        <link rel="prev" href="../UnifiedContentCleanup/">
       
       
-        <link rel="next" href="../RPCMinConnectionTimeoutCheck/">
+        <link rel="next" href="../../ManagedAvailabilityTroubleshooter/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>CredentialGuardCheck - Microsoft - CSS-Exchange</title>
+        <title>TransportRetryConfigCheck - Microsoft - CSS-Exchange</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#credential-guard-check" class="md-skip">
+        <a href="#transport-retry-configuration-check" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CredentialGuardCheck
+              TransportRetryConfigCheck
             
           </span>
         </div>
@@ -1179,19 +1179,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../CredentialGuardCheck/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1191,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1966,10 +1956,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../TransportRetryConfigCheck/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TransportRetryConfigCheck
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1978,6 +1988,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#maxperdomainoutboundconnections" class="md-nav__link">
+    <span class="md-ellipsis">
+      MaxPerDomainOutboundConnections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messageretryinterval" class="md-nav__link">
+    <span class="md-ellipsis">
+      MessageRetryInterval
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#included-in-html-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Included in HTML Report?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3430,6 +3496,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#maxperdomainoutboundconnections" class="md-nav__link">
+    <span class="md-ellipsis">
+      MaxPerDomainOutboundConnections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messageretryinterval" class="md-nav__link">
+    <span class="md-ellipsis">
+      MessageRetryInterval
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#included-in-html-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Included in HTML Report?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3443,7 +3553,7 @@
                   
 
   
-    <a href="https://github.com/microsoft/CSS-Exchange/edit/main/docs/Diagnostics/HealthChecker/CredentialGuardCheck.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/microsoft/CSS-Exchange/edit/main/docs/Diagnostics/HealthChecker/TransportRetryConfigCheck.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3451,13 +3561,21 @@
   
 
 
-<h1 id="credential-guard-check">Credential Guard Check</h1>
-<p><strong>Description:</strong></p>
-<p>In this check we validate, weather <code>Credential Guard</code> was activated or not. <code>Credential Guard</code> is not supported on an Exchange Server. This can cause a performance hit on the server.</p>
-<p><strong>Included in HTML Report?</strong></p>
+<h1 id="transport-retry-configuration-check">Transport Retry Configuration Check</h1>
+<p>This check verifies that the Transport Service retry configuration and max outbound connections per domain are set to the recommended values. When these values are not set to the recommended values, it can cause mail queueing or longer than expected delivery time when a transient failure occurs.</p>
+<p>This check validates the following settings in the <code>Get-TransportService</code> configuration:</p>
+<ul>
+<li><code>MaxPerDomainOutboundConnections</code> is set to 40 or greater</li>
+<li><code>MessageRetryInterval</code> is set to 5 minutes or less</li>
+</ul>
+<h2 id="maxperdomainoutboundconnections">MaxPerDomainOutboundConnections</h2>
+<p>This setting controls the number of outbound connections that can be open for a single destination domain at one time. When this setting is too low and connections are exhausted, it will cause mail to queue up in the transport service and cause delays in mail delivery. This is most noticeable when mail is sent to a single destination such as in an Office 365 hybrid environment.</p>
+<h2 id="messageretryinterval">MessageRetryInterval</h2>
+<p>This setting controls the interval at which the transport service will retry sending a message that has failed to send due to a transient error. When this setting is too high, it can cause mail to queue up unnecessarily. Retrying sooner in most cases will allow the message to be delivered in a timely manner.</p>
+<h2 id="included-in-html-report">Included in HTML Report?</h2>
 <p>Yes</p>
-<p><strong>Additional resources:</strong></p>
-<p><a href="https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard-manage">Manage Windows Defender Credential Guard</a></p>
+<h2 id="additional-resources">Additional resources</h2>
+<p><a href="https://aka.ms/TransportRetryConfig">Email messages are stuck in Exchange Server queues for several minutes</a></p>
 
 
 
@@ -3478,7 +3596,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 19, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 29, 2024</span>
   </span>
 
     
