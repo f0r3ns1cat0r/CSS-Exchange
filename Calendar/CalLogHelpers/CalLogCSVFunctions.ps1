@@ -24,6 +24,7 @@ $script:CalendarItemTypes = @{
     'IPM.Schedule.Meeting.Canceled'                           = "Cancellation"
     'IPM.Schedule.Meeting.Transfer'                           = "Transfer"
     'IPM.Schedule.Meeting.ChangeOrganizerRequest'             = "ChangeOrg.Request"
+    'IPM.Schedule.Meeting.ChangeOrganizerResponse'            = "ChangeOrg.Resp.Any"
     'IPM.Schedule.Meeting.ChangeOrganizerResponse.Pos'        = "ChangeOrg.Resp.Pos"
     'IPM.Schedule.Meeting.ChangeOrganizerResponse.Neg'        = "ChangeOrg.Resp.Neg"
     'IPM.Schedule.Meeting.ChangeOrganizerRequestCancellation' = "ChangeOrg.RequestCancel"
