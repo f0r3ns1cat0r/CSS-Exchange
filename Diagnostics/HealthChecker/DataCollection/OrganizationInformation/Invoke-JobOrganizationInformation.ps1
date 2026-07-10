@@ -17,6 +17,7 @@ function Invoke-JobOrganizationInformation {
         # Build Process to add functions.
         . $PSScriptRoot\Get-ExchangeAdSchemaInformation.ps1
         . $PSScriptRoot\Get-ExchangeDomainsAclPermissions.ps1
+        . $PSScriptRoot\Get-ExchangeLegacySecurityGroups.ps1
         . $PSScriptRoot\Get-ExchangeWellKnownSecurityGroups.ps1
         . $PSScriptRoot\Get-SecurityCve-2021-34470.ps1
         . $PSScriptRoot\Get-SecurityCve-2022-21978.ps1
@@ -33,6 +34,7 @@ function Invoke-JobOrganizationInformation {
         $getOrganizationConfig = $null
         $domainsAclPermissions = $null
         $wellKnownSecurityGroups = $null
+        $legacySecurityGroups = $null
         $adSchemaInformation = $null
         $getHybridConfiguration = $null
         $getPartnerApplication = $null
@@ -111,6 +113,7 @@ function Invoke-JobOrganizationInformation {
             Get-ExchangeAdSchemaInformation | Invoke-RemotePipelineHandler -Result ([ref]$adSchemaInformation)
             Get-ExchangeDomainsAclPermissions | Invoke-RemotePipelineHandler -Result ([ref]$domainsAclPermissions)
             Get-ExchangeWellKnownSecurityGroups | Invoke-RemotePipelineHandler -Result ([ref]$wellKnownSecurityGroups)
+            Get-ExchangeLegacySecurityGroups | Invoke-RemotePipelineHandler -Result ([ref]$legacySecurityGroups)
             Get-ExchangeADSplitPermissionsEnabled -CatchActionFunction ${Function:Invoke-CatchActions} | Invoke-RemotePipelineHandler -Result ([ref]$isSplitADPermissions)
 
             # Exchange Cmdlets
@@ -293,6 +296,7 @@ function Invoke-JobOrganizationInformation {
             GetOrganizationConfig             = $getOrganizationConfig
             DomainsAclPermissions             = $domainsAclPermissions
             WellKnownSecurityGroups           = $wellKnownSecurityGroups
+            LegacySecurityGroups              = $legacySecurityGroups
             AdSchemaInformation               = $adSchemaInformation
             GetHybridConfiguration            = $getHybridConfiguration
             GetPartnerApplication             = $getPartnerApplication

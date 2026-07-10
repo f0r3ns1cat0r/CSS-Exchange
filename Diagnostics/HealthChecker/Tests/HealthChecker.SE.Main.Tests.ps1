@@ -347,6 +347,7 @@ Describe "Testing Health Checker by Mock Data Imports - Exchange SE" {
             Assert-MockCalled Get-IISModules -Exactly 1 -Scope Context
             Assert-MockCalled Get-ExchangeDiagnosticInfo -Exactly 2 -Scope Context
             Assert-MockCalled Get-ExchangeADSplitPermissionsEnabled -Exactly 1 -Scope Context
+            Assert-MockCalled Search-AllActiveDirectoryDomains -Exactly 1 -Scope Context
             Assert-MockCalled Get-DynamicDistributionGroup -Exactly 1 -Scope Context
             Assert-MockCalled Get-ActiveSyncVirtualDirectory -Exactly 1 -Scope Context
             Assert-MockCalled Get-AutodiscoverVirtualDirectory -Exactly 1 -Scope Context
