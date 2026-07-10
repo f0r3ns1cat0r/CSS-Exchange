@@ -1,6 +1,9 @@
 dist
 .DS_Store
 
+# Generated at pipeline runtime by "Configure CFS npm feed" (see azure-pipeline-merge.yml)
+.build/.npmrc
+
 # Personal Copilot/AI overrides (per-developer, not shared)
 .copilot/
 .claude/
