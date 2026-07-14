@@ -197,7 +197,7 @@ Describe "Testing Health Checker by Mock Data Imports - Exchange SE" {
             SetActiveDisplayGrouping "Security Vulnerability"
 
             $cveTests = GetObject "Security Vulnerability"
-            $cveTests.Count | Should -Be 19
+            $cveTests.Count | Should -Be 23
 
             $downloadDomains = GetObject "CVE-2021-1730"
             $downloadDomains.DownloadDomainsEnabled | Should -Be "False"
@@ -347,6 +347,7 @@ Describe "Testing Health Checker by Mock Data Imports - Exchange SE" {
             Assert-MockCalled Get-IISModules -Exactly 1 -Scope Context
             Assert-MockCalled Get-ExchangeDiagnosticInfo -Exactly 2 -Scope Context
             Assert-MockCalled Get-ExchangeADSplitPermissionsEnabled -Exactly 1 -Scope Context
+            Assert-MockCalled Search-AllActiveDirectoryDomains -Exactly 1 -Scope Context
             Assert-MockCalled Get-DynamicDistributionGroup -Exactly 1 -Scope Context
             Assert-MockCalled Get-ActiveSyncVirtualDirectory -Exactly 1 -Scope Context
             Assert-MockCalled Get-AutodiscoverVirtualDirectory -Exactly 1 -Scope Context

@@ -474,12 +474,47 @@ Describe "Exchange SE Scenarios Testing" {
             # Reset AuthServer to return both ACS + EvoSTS (S1 sets it to "ACS")
             $Script:GetAuthServerMockDataType = "All"
 
+            # Legacy Exchange security groups present (security best practice cleanup).
+            # Mock the underlying AD search so the real Get-ExchangeLegacySecurityGroups logic runs.
+            Mock Search-AllActiveDirectoryDomains -ParameterFilter { $Filter -like "*Exchange Domain Servers*" } -MockWith {
+                return @(
+                    (NewMockAdSearchResult -DistinguishedName "CN=Exchange Domain Servers,CN=Users,DC=contoso,DC=com" -SamAccountName "Exchange Domain Servers" -GroupType -2147483646),
+                    (NewMockAdSearchResult -DistinguishedName "CN=Exchange Enterprise Servers,CN=Users,DC=contoso,DC=com" -SamAccountName "Exchange Enterprise Servers" -GroupType -2147483644),
+                    (NewMockAdSearchResult -DistinguishedName "CN=Exchange Recipient Administrators,OU=Microsoft Exchange Security Groups,DC=contoso,DC=com" -SamAccountName "Exchange Recipient Administrators" -GroupType -2147483640 -MemberCount 3)
+                )
+            }
+
             SetDefaultRunOfHealthChecker "Debug_SE_Scenario3_Physical_Results.xml"
         }
 
         It "Dynamic Public Folder Mailboxes" {
             SetActiveDisplayGrouping "Organization Information"
             TestObjectMatch "Dynamic Distribution Group Public Folder Mailboxes Count" 2 -WriteType "Red"
+        }
+
+        It "Legacy Exchange Security Groups Detected" {
+            SetActiveDisplayGrouping "Organization Information"
+            TestObjectMatch "Legacy Exchange Security Groups" $true -WriteType "Yellow"
+        }
+
+        It "Legacy Exchange Security Groups Parsed Correctly" {
+            # Directly exercises the real Get-ExchangeLegacySecurityGroups parsing (scope decode from
+            # groupType, member count, DN) against the mocked Search-AllActiveDirectoryDomains data.
+            $legacyGroups = @(Get-ExchangeLegacySecurityGroups | Where-Object { $null -ne $_.DistinguishedName })
+            $legacyGroups.Count | Should -Be 3
+
+            $domainServers = $legacyGroups | Where-Object { $_.Name -eq "Exchange Domain Servers" }
+            $domainServers.Scope | Should -Be "Global"
+            $domainServers.MemberCount | Should -Be 0
+            $domainServers.DistinguishedName | Should -Be "CN=Exchange Domain Servers,CN=Users,DC=contoso,DC=com"
+
+            $enterpriseServers = $legacyGroups | Where-Object { $_.Name -eq "Exchange Enterprise Servers" }
+            $enterpriseServers.Scope | Should -Be "DomainLocal"
+            $enterpriseServers.MemberCount | Should -Be 0
+
+            $recipientAdmins = $legacyGroups | Where-Object { $_.Name -eq "Exchange Recipient Administrators" }
+            $recipientAdmins.Scope | Should -Be "Universal"
+            $recipientAdmins.MemberCount | Should -Be 3
         }
 
         It "Extended Protection Enabled" {

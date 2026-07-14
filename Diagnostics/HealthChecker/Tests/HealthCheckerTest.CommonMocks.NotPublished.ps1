@@ -154,6 +154,39 @@ Mock Get-ExchangeWellKnownSecurityGroups {
     return Import-Clixml "$Script:MockDataCollectionRoot\Exchange\GetExchangeWellKnownSecurityGroups.xml"
 }
 
+# Builds an object shaped like a System.DirectoryServices.SearchResult so the real
+# Get-ExchangeLegacySecurityGroups parsing logic (scope decode, member count, DN handling) is tested.
+# An absent 'member' (empty array) mimics the GC not replicating membership for Global/Domain Local groups.
+function NewMockAdSearchResult {
+    [CmdletBinding()]
+    param(
+        [string]$DistinguishedName,
+        [string]$SamAccountName,
+        [int]$GroupType,
+        [int]$MemberCount = 0
+    )
+
+    $members = @()
+    if ($MemberCount -gt 0) {
+        $members = @(1..$MemberCount | ForEach-Object { "CN=Member$_,CN=Users,DC=contoso,DC=com" })
+    }
+
+    return [PSCustomObject]@{
+        Properties = @{
+            distinguishedName = @($DistinguishedName)
+            sAMAccountName    = @($SamAccountName)
+            groupType         = @($GroupType)
+            member            = $members
+        }
+    }
+}
+
+# Default: the legacy Exchange security groups are not present. Specific tests override this with a
+# -ParameterFilter on $Filter to return mock search results for the legacy groups query.
+Mock Search-AllActiveDirectoryDomains {
+    return @()
+}
+
 Mock Get-HttpProxySetting {
     return Import-Clixml "$Script:MockDataCollectionRoot\OS\GetHttpProxySetting.xml"
 }
