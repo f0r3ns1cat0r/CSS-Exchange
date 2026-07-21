@@ -17,6 +17,7 @@ $script:CustomPropertyNameList =
 "ClientIntent",
 "ClientProcessName",
 "CreationTime",
+"RequestChangeMeetingOrganizerMetadataRaw",
 "DisplayAttendeesCc",
 "DisplayAttendeesTo",
 "EventEmailReminderTimer",
@@ -45,7 +46,11 @@ $script:CustomPropertyNameList =
 "Sensitivity",
 "SentRepresentingDisplayName",
 "ShortClientInfoString",
-"TimeZone"
+"TimeZone",
+"TransferredDestinationICalUid",
+"TransferredDestinationOrganizerId",
+"TransferredOriginalICalUid",
+"TransferredOriginalOrganizerId"
 
 $LogLimit = 2000
 
